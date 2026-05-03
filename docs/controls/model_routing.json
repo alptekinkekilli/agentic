@@ -1,0 +1,58 @@
+{
+  "policy_version": "1.0",
+  "default_provider": "configurable",
+  "tiers": {
+    "fast": {
+      "purpose": "Low-cost planning, review, and coordination work where speed matters more than deep code generation.",
+      "cost_weight": 1,
+      "speed_weight": 5,
+      "quality_weight": 3
+    },
+    "premium": {
+      "purpose": "Critical implementation work where correctness and code quality matter most.",
+      "cost_weight": 5,
+      "speed_weight": 3,
+      "quality_weight": 5
+    },
+    "economy": {
+      "purpose": "Routine validation, reporting, operations notes, and repeatable checks.",
+      "cost_weight": 1,
+      "speed_weight": 4,
+      "quality_weight": 2
+    }
+  },
+  "roles": {
+    "architect": {
+      "tier": "fast",
+      "alias": "fast-planner",
+      "reason": "Architecture decomposition and task writing should be quick and inexpensive."
+    },
+    "coder": {
+      "tier": "premium",
+      "alias": "premium-coder",
+      "reason": "Coder owns real implementation changes and has the highest defect risk."
+    },
+    "reviewer": {
+      "tier": "fast",
+      "alias": "fast-reviewer",
+      "reason": "Reviewer checks scope, risks, and handoff quality with low write authority."
+    },
+    "tester": {
+      "tier": "economy",
+      "alias": "economy-tester",
+      "reason": "Tester runs repeatable validation and records pass/fail evidence."
+    },
+    "ops": {
+      "tier": "economy",
+      "alias": "economy-ops",
+      "reason": "Ops handles routine deployment notes, verification, and rollback records."
+    }
+  },
+  "budget_guardrails": {
+    "premium_allowed_roles": [
+      "coder"
+    ],
+    "require_reason_for_premium": true,
+    "estimated_savings_target": "60-70 percent versus using premium for every role"
+  }
+}

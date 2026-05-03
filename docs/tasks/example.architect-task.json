@@ -1,0 +1,29 @@
+{
+  "id": "task-0001",
+  "title": "Design minimal two-agent bootstrap",
+  "role": "architect",
+  "status": "pending",
+  "created_at": "2026-05-03T00:00:00+03:00",
+  "objective": "Define the smallest useful Architect and Coder workflow using the shared queue.",
+  "context": [
+    "Start with Architect and Coder only.",
+    "Preserve context isolation between agents."
+  ],
+  "allowed_paths": [
+    "docs/",
+    ".queue/"
+  ],
+  "validation": [
+    "Validate that the task contract includes owner role, allowed paths, acceptance criteria, and out-of-scope items."
+  ],
+  "acceptance_criteria": [
+    "Workflow has a clear task lifecycle.",
+    "Coder cannot write outside allowed_paths.",
+    "Session closure is documented."
+  ],
+  "out_of_scope": [
+    "Reviewer, Tester, and Ops automation",
+    "Model routing",
+    "Deployment"
+  ]
+}

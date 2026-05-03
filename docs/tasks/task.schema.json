@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agentic Task",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "role",
+    "status",
+    "created_at",
+    "objective",
+    "allowed_paths",
+    "acceptance_criteria"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["architect", "coder", "reviewer", "tester", "ops"]
+    },
+    "model_tier": {
+      "type": "string",
+      "enum": ["fast", "premium", "economy"]
+    },
+    "model_alias": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in-progress", "done", "failed"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "claimed_by": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "out_of_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "result": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

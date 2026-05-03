@@ -1,0 +1,94 @@
+{
+  "architect": {
+    "may_edit": [
+      ".queue/",
+      "docs/",
+      "agents/",
+      "orchestrator.sh"
+    ],
+    "must_not_edit": [
+      "agentic/",
+      "src/",
+      "tests/",
+      "Dockerfile",
+      "setup.py"
+    ],
+    "required_completion_fields": [
+      "summary",
+      "changed_files",
+      "validation"
+    ]
+  },
+  "coder": {
+    "may_edit": [
+      ".queue/",
+      "agentic/",
+      "src/",
+      "scripts/",
+      "tests/",
+      "docs/"
+    ],
+    "must_not_edit": [
+      "agents/"
+    ],
+    "required_completion_fields": [
+      "summary",
+      "changed_files",
+      "validation"
+    ]
+  },
+  "reviewer": {
+    "may_edit": [
+      ".queue/",
+      "docs/"
+    ],
+    "must_not_edit": [
+      "agentic/",
+      "src/",
+      "scripts/",
+      "tests/",
+      "agents/"
+    ],
+    "required_completion_fields": [
+      "summary",
+      "validation"
+    ]
+  },
+  "tester": {
+    "may_edit": [
+      ".queue/",
+      "docs/",
+      "tests/"
+    ],
+    "must_not_edit": [
+      "agentic/",
+      "src/",
+      "scripts/",
+      "agents/"
+    ],
+    "required_completion_fields": [
+      "summary",
+      "validation"
+    ]
+  },
+  "ops": {
+    "may_edit": [
+      ".queue/",
+      "docs/",
+      "Dockerfile",
+      ".gitignore",
+      "orchestrator.sh"
+    ],
+    "must_not_edit": [
+      "agentic/",
+      "src/",
+      "scripts/",
+      "tests/",
+      "agents/"
+    ],
+    "required_completion_fields": [
+      "summary",
+      "validation"
+    ]
+  }
+}

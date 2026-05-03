@@ -33,6 +33,7 @@ python3 -m agentic.cli
 pytest
 bash tests/test_queue_status.sh
 python3 scripts/control_check.py
+python3 scripts/public_safety_check.py
 ```
 
 ## Project Layout
@@ -42,6 +43,10 @@ python3 scripts/control_check.py
 - `scripts/`: queue and control helpers
 - `docs/`: public-safe architecture, hardening, workflow, and checklist docs
 - `tests/`: focused smoke and queue helper tests
+
+## Public Safety
+
+Before pushing changes to public core, run the public release checklist in `docs/checklists/public-release-checklist.md`.
 
 ## Status
 
